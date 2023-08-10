@@ -7,33 +7,35 @@
 </head>
 <body class="page__body">
   <!--Шапка соновной страницы-->
-  <header class="main-header">
-    <a class="main-header__logo" href="#">
-      <img class="main-header__logo-image logo-image" src="#" width="70px" height="59px" alt="Кэт энерджи">
-      <img class="main-header__logo-name-image logo-name-image" src="#" width="118px" height="21px" alt="Кэт энерджи">
+  <header class="page-header">
+    <a class="page-header__logo" href="#">
+      <img class="page-header__logo-image logo-image" src="#" width="70px" height="59px" alt="Кэт энерджи">
+      <img class="page-header__logo-name-image logo-name-image" src="#" width="118px" height="21px" alt="Кэт энерджи">
     </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-      <ul class="main-nav__list site-list">
-        <li class="site-list__item site-list--active">
-          <a class="site-list__link" href="#">Главная</a>
+    <button class="page-header__button" type="button"><span class="visually-hidden">Открыть меню</span></button>
+    <nav class="page-nav">
+      <ul class="page-nav__list nav-list">
+        <li class="nav-list__item nav-list--active">
+          <a class="nav-list__link" href="#">Главная</a>
         </li>
-        <li class="site-list__item">
-          <a class="site-list__link" href="catalog.html">Каталог продукции</a>
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="catalog.html">Каталог продукции</a>
         </li>
-        <li class="site-list__item">
-          <a class="site-list__link" href="form.html">Подбор программы</a>
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="form.html">Подбор программы</a>
         </li>
       </ul>
     </nav>
-      <img class="main-header__img" src="#" width="280px" height="270px" alt="Баночка с кошачьим кормом">
-      <div class="rectangle-background"></div>
-      <h1 class="main-header__title">Функциональное питание для котов</h1>
-      <p class="main-header__discription">Занялся собой? Займись котом!</p>
-      <a class="button main-header__button " href="form.html" title="Заполните анкету и мы подберем программу">Подобрать программу</a>
   </header>
   <!--Основной контент главной страницы-->
   <main>
+    <div class="page-cover">
+      <img class="page-cover__img" src="#" width="280px" height="270px" alt="Баночка с кошачьим кормом">
+      <div class="page-cover-background"></div>
+      <h1 class="page-cover__title">Функциональное питание для котов</h1>
+      <p class="page-cover__discription">Занялся собой? Займись котом!</p>
+      <a class="button page-cover__button " href="form.html" title="Заполните анкету и мы подберем программу">Подобрать программу</a>
+    </div>
     <!--Виды программ питания-->
     <ul class="type-nutrition-programs nutrition-programs__list">
       <li class="nutrition-programs__item">
@@ -144,19 +146,19 @@
         <img class="cat-after" src="#" width="280px" height="56px" alt="Стройный кот">
       </div>
     </section>
-    <!--Расположение магазина-->
-    <section class="location">
-      <h2 class="visually-hidden">Карта с расположением магазина</h2>
-      <div class="cooperation">
-        <p class="cooperation-description">приглашаем к сотрудничеству дилеров!</p>
-        <span class="cooperation__address">ул. Большая Конюшенная, д. 19/8</span>
-        <span class="cooperation__city">Санкт-Петербург</span>
-      </div>
-      <div class="locaition__map"></div>
-    </section>
   </main>
   <!-- Подвал главной страницы-->
   <footer class="footer-page">
+    <!--Расположение магазина-->
+    <section class="footer-page__location location">
+      <h2 class="visually-hidden">Карта с расположением магазина</h2>
+      <div class="location__cooperation">
+        <p class="location__cooperation-description">приглашаем к сотрудничеству дилеров!</p>
+        <span class="location-cooperation__address">ул. Большая Конюшенная, д. 19/8</span>
+        <span class="location-cooperation__city">Санкт-Петербург</span>
+      </div>
+      <div class="locaition__map"></div>
+    </section>
     <a class="footer-page__logo" href="index.html">
       <img class="footer-page__img" src="#" width="128px" height="24px" alt="Кэт энерджи">
     </a>
