@@ -33,15 +33,15 @@
     <p class="program-selection__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
     <!--Анкета данных кота-->
     <form class="program-selection__blank">
-      <fieldset class="blank__item">
-        <label class="item__form__title">Имя:*
-          <input class="form__name" required type="text" name="name" placeholder="Барсик">
+      <fieldset class="cat-profile">
+        <label class="cat-profile__title">Имя:*
+          <input class="cat-profile__name" required type="text" name="name" placeholder="Барсик">
         </label>
-        <label class="item__form__title">Вес (кг):*
-          <input class="form__weight" required type="text" name="weight" placeholder="7">
+        <label class="cat-profile__title">Вес (кг):*
+          <input class="cat-profile__weight" required type="text" name="weight" placeholder="7">
         </label>
-        <label class="item__form__title">Возраст (лет):
-          <input class="form__age" type="text" name="age" placeholder="7">
+        <label class="cat-profile__title">Возраст (лет):
+          <input class="cat-profile__age" type="text" name="age" placeholder="7">
         </label>
       </fieldset>
       <!--Выбор специфичности программы-->
@@ -62,10 +62,10 @@
       <!--Контакты хозяина кота-->
       <fieldset class="contact-details">
         <legend class="contact-details__title">Контактные данные (владельца кота)</legend>
-        <label class="contact-details">E-mail:*
+        <label class="contact-details__item">E-mail:*
           <input class="contact-details__mail" required type="email" name="e-mail" placeholder="KUKLACHEV@GMAIL.COM">
         </label>
-        <label class="contact-details">Телефон
+        <label class="contact-details__item">Телефон
           <input class="contact-details__telefone" required type="tel" name="telefone" placeholder="8 (960) 900-60-90">
         </label>
       </fieldset>
