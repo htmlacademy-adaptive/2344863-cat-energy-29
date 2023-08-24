@@ -29,6 +29,7 @@
   /*font-style: normal;
   font-weight: 400;*/
   line-height: 24px;
+  text-transform: uppercase;
 }
 
 .calculation-weight__note {
@@ -47,6 +48,7 @@
   /*font-style: normal;
   font-weight: 400;*/
   line-height: 24px;
+  text-transform: uppercase;
 }
 
 .calculation-period__note {
@@ -58,22 +60,61 @@
   line-height: 12px;
 }
 
-.calculation-resalt-note {
+.calculation-resalt-note,
+.calculation-resalt-price {
   .oswald;
-  /*font-family: "Oswald", sans-serif;*/
   font-size: 14px;
-  /*font-style: normal;
-  font-weight: 400;*/
   line-height: 20px;
   text-transform: uppercase;
 }
 
-.calculation-resalt-price {
-  .oswald;
-  /*font-family: "Oswald", sans-serif;*/
-  font-size: 14px;
-  /*font-style: normal;
-  font-weight: 400;*/
-  line-height: 20px;
-  text-transform: uppercase;
+
+.exampl__calculation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.calculation-weight {
+  display: flex;
+  flex-direction: column;
+    &__kilo,
+    &__note {
+      align-self: center;
+  }
+}
+
+.calculation-period {
+  display: flex;
+  flex-direction: column;
+    &__day,
+    &__note {
+      align-self: center;
+    }
+}
+
+.calculation-weight__kilo,
+.calculation-period__day {
+  display: block;
+  width: 124px;
+  height: 56px;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+  text-align: center;
+}
+
+
+.calculation-weight__note,
+.calculation-period__note {
+  display: block;
+  position: relative;
+  top: -10px;
+  width: 72px;
+  text-align: center;
+  background-color: #eaeaea;
+}
+
+.calculation-resalt {
+  text-align: center;
+  margin-top: 8px;
 }

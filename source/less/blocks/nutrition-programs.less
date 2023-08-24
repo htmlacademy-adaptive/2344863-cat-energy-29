@@ -1,6 +1,8 @@
 .nutrition-programs__list {
   margin: 0;
   padding: 0;
+  display: grid;
+  gap: 20px;
 }
 
 .nutrition-programs__item {
@@ -9,12 +11,22 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .nutrition-programs__icon {
-  margin-top: 24px;
-  margin-left: 20px;
-  position: relative;
+
+}
+
+.icon-cat-sit {
+  margin-left: 27px;
+  margin-top: 21px;
+}
+
+.icon-cat-walk {
+  margin-left: 13px;
+  margin-top: 35px;
 }
 
 .nutrition-programs__icon::before {
@@ -37,6 +49,10 @@
   line-height: 37px;
   text-transform: uppercase;
   color: #000000;
+  margin-left: 90px;
+  display: block;
+  margin-top: 30px;
+  position: absolute;
 }
 
 .nutrition-programs__description {
