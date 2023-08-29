@@ -19,7 +19,7 @@
       <button class="page-header__button" type="button"><span class="visually-hidden">Открыть меню</span></button>
     </div>
     <nav class="page-nav">
-      <ul class="page-nav__list nav-list">
+      <ul class="page-nav__list">
         <li class="page-nav__list-item">
           <a class="page-nav__list-link" href="index.html">Главная</a>
         </li>
@@ -38,70 +38,70 @@
     <p class="program-selection__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
     <!--Анкета данных кота-->
     <form class="program-selection__blank">
-      <fieldset class="cat-profile">
-        <label class="cat-profile__title">Имя:*
-          <input class="cat-profile__name" required type="text" name="name" placeholder="Барсик">
+      <fieldset class="program-selection__cat-profile">
+        <label class="program-selection__cat-profile-title">Имя:*
+          <input class="program-selection__cat-profile-name" required type="text" name="name" placeholder="Барсик">
         </label>
-        <label class="cat-profile__title">Вес&nbsp;(кг):*
-          <input class="cat-profile__weight" required type="text" name="weight" placeholder="7">
+        <label class="program-selection__cat-profile-title">Вес&nbsp;(кг):*
+          <input class="program-selection__cat-profile-weight" required type="text" name="weight" placeholder="7">
         </label>
-        <label class="cat-profile__title">Возраст&nbsp;(лет):
-          <input class="cat-profile__age" type="text" name="age" placeholder="7">
+        <label class="program-selection__cat-profile-title">Возраст&nbsp;(лет):
+          <input class="program-selection__cat-profile-age" type="text" name="age" placeholder="7">
         </label>
       </fieldset>
       <!--Выбор специфичности программы-->
-      <fieldset class="program-specificity">
-        <label class="program-specificity__title">
-          <input class="program-specificity__item" type="radio" name="program" value="slim">
+      <fieldset class="program-selection__specificity">
+        <label class="program-selection__specificity-title">
+          <input class="program-selection__specificity-item" type="radio" name="program" value="slim">
           Похудение
         </label>
-        <label class="program-specificity__title">
-          <input class="program-specificity__item" type="radio" name="program" value="pro">
+        <label class="program-selection__specificity-title">
+          <input class="program-selection__specificity-item" type="radio" name="program" value="pro">
           Набор массы
         </label>
-        <label class="program-specificity__title">
-          <input class="program-specificity__item" type="radio" name="program" value="question">
+        <label class="program-selection__specificity-title">
+          <input class="program-selection__specificity-item" type="radio" name="program" value="question">
           Не знаю (Нужен ваш совет)
         </label>
       </fieldset>
       <!--Контакты хозяина кота-->
-      <fieldset class="contact-details">
-        <legend class="contact-details__title">Контактные данные<br> (владельца кота)</legend>
-        <label class="contact-details__item">E-&nbsp;mail:*
-          <input class="contact-details__mail" required type="email" name="e-mail" placeholder="KUKLACHEV@GMAIL.COM">
+      <fieldset class="program-selection__contact-details">
+        <legend class="program-selection__contact-details-title">Контактные данные<br> (владельца кота)</legend>
+        <label class="program-selection__contact-details-item">E-&nbsp;mail:*
+          <input class="program-selection__contact-details-mail" required type="email" name="e-mail" placeholder="KUKLACHEV@GMAIL.COM">
         </label>
-        <label class="contact-details__item">Телефон:*
-          <input class="contact-details__telefone" required type="tel" name="telefone" placeholder="8 (960) 900-60-90">
+        <label class="program-selection__contact-details-item">Телефон:*
+          <input class="program-selection__contact-details-telefone" required type="tel" name="telefone" placeholder="8 (960) 900-60-90">
         </label>
       </fieldset>
       <!--КомментариЙ-->
-      <fieldset class="comment">
-        <legend class="comment__title">Комментарий</legend>
-          <textarea class="comment__about"  name="comment" placeholder="Расскажите обо всех повадках кота" wrap="soft" rows="5">
+      <fieldset class="program-selection__comment">
+        <legend class="program-selection__comment-title">Комментарий</legend>
+          <textarea class="program-selection__comment-about"  name="comment" placeholder="Расскажите обо всех повадках кота" wrap="soft" rows="5">
           </textarea>
       </fieldset>
       <!--Дополнительная информация-->
-      <fieldset class="additional">
-        <legend class="additional__title">Дополнительно</legend>
-          <label class="additional__item">
-            <input class="additional__item-name" type="checkbox" name="sweetener" value="order">
+      <fieldset class="program-selection__additional">
+        <legend class="program-selection__additional-title">Дополнительно</legend>
+          <label class="program-selection__additional-item">
+            <input class="program-selection__additional-item-name" type="checkbox" name="sweetener" value="order">
             Сахарозаменитель
           </label>
-          <label class="additional__item">
-            <input class="additional__item-name" type="checkbox" name="milk" value="order">
+          <label class="program-selection__additional-item">
+            <input class="program-selection__additional-item-name" type="checkbox" name="milk" value="order">
             Молоко
           </label>
-          <label class="additional__item">
-            <input class="additional__item-name" type="checkbox" name="water" value="order">
+          <label class="program-selection__additional-item">
+            <input class="program-selection__additional-item-name" type="checkbox" name="water" value="order">
             Питьевая вода
           </label>
-          <label class="additional__item">
-            <input class="additional__item-name" type="checkbox" name="vitamin" value="order">
+          <label class="program-selection__additional-item">
+            <input class="program-selection__additional-item-name" type="checkbox" name="vitamin" value="order">
             Витамины
           </label>
       </fieldset>
       <button class="button program-selection__button" type="submit">Отправить заявку</button>
-      <span class="required-field">*-обязательные поля</span>
+      <span class="program-selection__required-field">*-обязательные поля</span>
     </form>
   </main>
   <!-- Подвал главной страницы-->
@@ -117,7 +117,7 @@
         </div>
       </div>
       <div class="locaition__map">
-        <img class="locaition__map-point" src="img\map pin.png.png" width="57px" height="53px" title="Точка расположения магазина на карте">
+        <img class="locaition__map-point" src="img\map pin.png" width="57px" height="53px" title="Точка расположения магазина на карте">
       </div>
     </section>
     <div class="footer-page__conteiner">
