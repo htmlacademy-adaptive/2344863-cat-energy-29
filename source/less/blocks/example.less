@@ -1,0 +1,114 @@
+.example {
+  background-color: #eaeaea;
+}
+
+
+.example__title {
+  .oswald;
+  font-size: 36px;
+  line-height: 40px;
+  color: #000000;
+}
+
+
+.example__description {
+  .lato;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
+}
+
+
+.example__calculation-weight-kilo {
+  .oswald;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+
+.example__calculation-weight-note {
+  .lato;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+
+.example__calculation-period-day {
+  .oswald;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+
+.example__calculation-period-note {
+  .lato;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+
+.example__calculation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+.example__calculation-weight {
+  display: flex;
+  flex-direction: column;
+
+  &-kilo,
+  &-note {
+    align-self: center;
+  }
+}
+
+
+.example__calculation-period {
+  display: flex;
+  flex-direction: column;
+
+  &-day,
+  &-note {
+    align-self: center;
+  }
+}
+
+
+.example__calculation-weight-kilo,
+.example__calculation-period-day {
+  display: block;
+  width: 124px;
+  height: 56px;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+  text-align: center;
+}
+
+
+.example__calculation-weight-note,
+.example__calculation-period-note {
+  display: block;
+  position: relative;
+  top: -10px;
+  width: 72px;
+  text-align: center;
+  background-color: #eaeaea;
+}
+
+
+.example__cost {
+  text-align: center;
+  margin-top: 8px;
+
+  &-note,
+  &-price {
+    .oswald;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+}
