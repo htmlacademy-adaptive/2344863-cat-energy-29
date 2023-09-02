@@ -8,6 +8,18 @@
   .zero-list;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    min-width: 436px;
+    flex-direction: row;
+    gap: 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 475px;
+    flex-direction: row;
+    gap: 33px;
+  }
 }
 
 
@@ -28,4 +40,17 @@
   display: block;
   padding: 22px 0 24px 0;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 0;
+    color: #ffffff;
+  }
 }

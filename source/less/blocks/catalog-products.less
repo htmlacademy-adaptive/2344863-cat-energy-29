@@ -9,7 +9,25 @@
 
 .catalog-products__list {
   .zero-list;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+    justify-items: center;
+    gap: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: end;
+    justify-items: center;
+    column-gap: 80px;
+    row-gap: 63px;
+  }
 }
+
 
 .product__empty {
   display: flex;

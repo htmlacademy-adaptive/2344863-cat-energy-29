@@ -1,5 +1,16 @@
 .example {
   background-color: #eaeaea;
+  height: 659px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    height: 619px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 462px;
+  }
 }
 
 
@@ -53,6 +64,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    width: 366px;
+  }
 }
 
 
@@ -110,5 +125,23 @@
     font-size: 14px;
     line-height: 20px;
     text-transform: uppercase;
+  }
+
+  @media (min-width: @tablet-width) {
+    align-self: flex-end;
+    position: relative;
+    bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  @media (min-width: @desktop-width) {
+    align-self: flex-start;
+    position: relative;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }

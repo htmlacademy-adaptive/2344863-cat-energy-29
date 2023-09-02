@@ -10,6 +10,17 @@
   padding: 0;
   display: grid;
   gap: 20px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 136px;
+    row-gap: 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 77px;
+  }
 }
 
 .advantage-functional-nutrition__item {

@@ -1,7 +1,25 @@
+/*.product-other {
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}*/
+
+
 .product-other__list {
   .zero-list;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 895px;
+  }
 }
 
 
@@ -9,6 +27,12 @@
   .zero-list;
   padding-bottom: 19px;
   border-bottom: 1px solid #dcdcdc;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 
