@@ -1,8 +1,16 @@
 
-/*.page-nav {
-  z-index: -1;
-  clip: rect(0 0 0 0);
-}*/
+.page-nav {
+  z-index: 1;
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: contents;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: contents;
+  }
+}
 
 .page-nav__list {
   .zero-list;
@@ -19,6 +27,7 @@
     min-width: 475px;
     flex-direction: row;
     gap: 33px;
+    z-index: 1;
   }
 }
 
@@ -27,7 +36,6 @@
   .zero-list;
   border-top: 1px solid #e6e6e6;
   box-sizing: border-box;
-  width: 100%;
 }
 
 .page-nav__list-link {
