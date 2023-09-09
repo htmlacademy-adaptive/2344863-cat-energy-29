@@ -1,13 +1,97 @@
 .example {
   background-color: #eaeaea;
+  min-width: 320px;
+  min-height: 659px;
+  position: relative;
+  left: -20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 619px;
+    background: linear-gradient(to top, #eaeaea 41%, #ffffff 41%);
+    gap: 55px;
+    left: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 1440px;
+    padding: 0 110px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    min-height: 462px;
+    background: linear-gradient(to top, #f2f2f2 70%, #ffffff 70%);
+    row-gap: 69px;
+    left: -110px;
+  }
 }
 
+
+.example__wrapper-text {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  gap: 40px;
+
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    gap: 60px;
+  }
+
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1/2;
+    padding: 0;
+    gap: 146px;
+  }
+}
+
+
+.example__wrapper-calculation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1/2;
+    flex-direction: column;
+    gap: 55px;
+  }
+}
+
+.example__slaider {
+  @media (min-width: @desktop-width) {
+    grid-column: 2/3;
+    grid-row: 1/3;
+  }
+}
 
 .example__title {
   .oswald;
   font-size: 36px;
   line-height: 40px;
   color: #000000;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 
@@ -16,36 +100,18 @@
   font-size: 14px;
   line-height: 18px;
   color: #444444;
-}
+  margin: 0;
 
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 
-.example__calculation-weight-kilo {
-  .oswald;
-  font-size: 24px;
-  line-height: 24px;
-  text-transform: uppercase;
-}
-
-
-.example__calculation-weight-note {
-  .lato;
-  font-size: 12px;
-  line-height: 12px;
-}
-
-
-.example__calculation-period-day {
-  .oswald;
-  font-size: 24px;
-  line-height: 24px;
-  text-transform: uppercase;
-}
-
-
-.example__calculation-period-note {
-  .lato;
-  font-size: 12px;
-  line-height: 12px;
+  @media (min-width: @desktop-width) {
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 433px;
+  }
 }
 
 
@@ -53,6 +119,17 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    gap: 42px;
+    justify-content: flex-start;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
 }
 
 
@@ -80,29 +157,68 @@
 
 .example__calculation-weight-kilo,
 .example__calculation-period-day {
+  .oswald;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
   display: block;
   width: 124px;
   height: 56px;
   border: 1px solid #cdcdcd;
   border-radius: 3px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+    width: 162px;
+    height: 77px;
+  }
 }
 
 
 .example__calculation-weight-note,
 .example__calculation-period-note {
+  font-size: 12px;
+  line-height: 12px;
   display: block;
   position: relative;
   top: -10px;
   width: 72px;
   text-align: center;
+  padding: 0 14px;
   background-color: #eaeaea;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+    width: max-content;
+    padding: 0 8px;
+    top: -8px;
+    background-color: #ffffff;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: #f2f2f2;
+  }
 }
 
 
 .example__cost {
-  text-align: center;
-  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 63px;
+  }
 
   &-note,
   &-price {
@@ -110,5 +226,36 @@
     font-size: 14px;
     line-height: 20px;
     text-transform: uppercase;
+
+    @media (min-width: @tablet-width) {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    align-self: baseline;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    align-self: flex-start;
+    position: relative;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 20px;
+    line-height: 20px;
   }
 }

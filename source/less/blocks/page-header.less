@@ -1,7 +1,43 @@
+.page-header {
+  min-width: 280px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 708px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 1220px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .page-header__logos {
   background-color: #ffffff;
   min-width: 280px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    min-width: 174px;
+    justify-content: flex-start;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 202px;
+    justify-content: flex-start;
+  }
+}
+
+.page-header__logo-icon {
+  @media (min-width: @tablet-width) {
+    padding-right: 13px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 14px;
+  }
 }
