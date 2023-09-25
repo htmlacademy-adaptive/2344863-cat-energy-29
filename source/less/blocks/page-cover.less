@@ -1,14 +1,17 @@
 .page-cover {
   min-width: 320px;
   min-height: 302px;
-  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("./../img/index-rectangle-background.png");
+  background-image: linear-gradient(to top, #ffffff 41%, rgba(104, 183, 56, 0.85) 41%, rgba(104, 183, 56, 0.85)), url("./../img/index-rectangle-background.png");
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 198px;
   position: relative;
   left: -20px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(to top, #ffffff 41%, rgba(104, 183, 56, 0.85) 41%, rgba(104, 183, 56, 0.85)), url("./../img/index-background-mobile-2x.png");
+  }
 
   @media (min-width: @tablet-width) {
     justify-content: flex-start;
@@ -19,39 +22,36 @@
     background-color: #ffffff;
     margin: 0;
     left: 0;
+    margin-top: 65px;
+    margin-left: 90px;
   }
 
   @media (min-width: @desktop-width) {
     justify-content: flex-end;
-    /*align-items: flex-start;
-    /*background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("./../img/index-rectangle-background.png");
-    height: 694px;
-    min-width: 1220px;
-    background-position: right;
-    background-size: 50% 100%;
-    z-index: -1;
-    margin-bottom: 82px;*/
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 195px 35px 190px;
+    grid-template-rows: 32% 8% 32%;
     align-items: center;
     justify-items: flex-start;
     row-gap: 40px;
     height: 694px;
     min-width: 1220px;
+    margin-left: 79px;
+    margin-top: 0;
   }
 }
 
 
 .page-cover__title {
   .oswald;
-  width: 249px;
+  width: 250px;
   font-size: 36px;
   line-height: 36px;
   color: #ffffff;
   text-align: center;
   margin: 0;
   margin-bottom: 25px;
+  margin-top: 27px;
 
   @media (min-width: @tablet-width) {
     width: 416px;
@@ -101,22 +101,24 @@
   }
 }
 
-
-.page-cover__img {
-  align-self: center;
+.page-cover__img,
+.page-cover picture {
+  margin-bottom: 3px;
 
   @media (min-width: @tablet-width) {
     width: 709px;
     height: 609px;
+    position: relative;
+    left: -47px;
   }
 
   @media (min-width: @desktop-width) {
     width: 552px;
     height: 499px;
     grid-column: 2/3;
+    grid-row: 1/4;
     position: relative;
-    top: -541px;
-    right: 140px;
+    left: -28px;
   }
 }
 
@@ -124,17 +126,26 @@
 .page-cover__button {
   .zero-link;
   text-align: center;
-  height: 40px;
+  min-width: 280px;
   padding: 8px 44px;
   box-sizing: border-box;
+  align-self: stretch;
+  margin: auto;
 
   @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
     position: relative;
     bottom: 585px;
-    left: 90px;
+    align-self: flex-start;
+    margin: 0;
+    padding: 14px 26px;
+    min-width: 244px;
   }
 
   @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 26px;
     grid-column: 1/2;
     grid-row: 3/4;
     align-self: start;
@@ -148,11 +159,15 @@
     height: 694px;
     grid-column: 2/3;
     grid-row: 1/4;
-    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("./../img/index-rectangle-background.png");
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("./../img/index-background-desktop.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     position: relative;
     top: -60px;
     left: 110px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("./../img/index-background-desktop-2x.png");
+    }
   }
 }
