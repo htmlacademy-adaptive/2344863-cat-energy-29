@@ -15,15 +15,59 @@
 }
 
 
+.nutrition-programs__index {
+  margin: 20px 0 0 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+}
+
+
 .nutrition-programs__item {
+  .zero-list();
   background-color: #f2f2f2;
   min-height: 266px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
+  padding: 20px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 372px;
+    display: grid;
+    grid-template-columns: 1px 1fr 263px;
+    grid-template-rows: 113px 1fr 87px;
+    column-gap: 52px;
+    justify-items: flex-start;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 374px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 266px;
+    padding: 47px 64px 59px 52px;
+    box-sizing: border-box;
+  }
 }
+
+
+/*.nutrition-programs__icon {
+  @media (min-width: @tablet-width) {
+    grid-column: 3/4;
+    grid-row: 1/4;
+    width: 200px;
+    height: 200px;
+    align-self: center;
+    justify-self: start;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100px;
+    height: 100px;
+  }
+}*/
 
 
 .icon-cat-sit {
@@ -38,17 +82,97 @@
 }
 
 
-.nutrition-programs__icon::before {
+/*.nutrition-programs__icon::after {
+  background: url("../img/cat-slim.svg");
+  background-repeat: no-repeat;
   width: 50px;
   height: 50px;
   content: "";
   position: absolute;
-  background-color: #68b738;
-  border-radius: 50%;
   top: auto;
   left: auto;
-}
+}*/
 
+
+.nutrition-programs__icon  {
+
+  &-slim,
+  &-pro {
+    background-color: #68b738;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: relative;
+
+    @media (min-width: @tablet-width) {
+      grid-column: 3/4;
+      grid-row: 1/4;
+      width: 200px;
+      height: 200px;
+      align-self: center;
+      justify-self: start;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  &-slim::after {
+    background: url("../img/cat-slim.svg");
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: 6px;
+
+    @media (min-width: @tablet-width) {
+      width: 140px;
+      height: 194px;
+      top: -12px;
+      left: 29px;
+      background-size: 100%;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 70px;
+      height: 97px;
+      top: -4px;
+      left: 15px;
+      background-size: 100%;
+    }
+  }
+
+  &-pro::after {
+    background: url("../img/cat-pro.svg");
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 50px;
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: -8px;
+
+    @media (min-width: @tablet-width) {
+      width: 268px;
+      height: 112px;
+      top: 44px;
+      left: -30px;
+      background-size: 100%;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 134px;
+      height: 56px;
+      top: 21px;
+      left: -16px;
+      background-size: 100%;
+    }
+  }
+}
 
 .nutrition-programs__title {
   .oswald;
@@ -60,6 +184,22 @@
   display: block;
   margin-top: 30px;
   position: absolute;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin: 0;
+    position: relative;
+    align-self: end;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 36px;
+    line-height: 36px;
+    align-self: center;
+  }
 }
 
 
@@ -68,6 +208,18 @@
   font-size: 14px;
   line-height: 18px;
   color: #444444;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 
@@ -78,4 +230,45 @@
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
+  align-self: center;
+  border-top: 1px solid #d9d9d9;
+  padding-top: 19px;
+  width: 100%;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    padding: 0;
+    border: none;
+    align-self: start;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+
+.nutrition-programs__icon-arrow {
+  padding-left: 15px;
+  align-self: center;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 25px;
+  }
 }

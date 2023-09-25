@@ -1,7 +1,15 @@
 
 .page-nav {
   z-index: 1;
-  display: none;
+  align-self: center;
+
+  &--opened {
+    position: relative;
+    background-color: #ffffff;
+    width: 100%;
+    /*left: 0;
+    top: 150px;*/
+  }
 
   @media (min-width: @tablet-width) {
     display: contents;
@@ -32,10 +40,25 @@
 }
 
 
+.page-nav--closed .page-nav__list {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+}
+
+
 .page-nav__list-item {
   .zero-list;
   border-top: 1px solid #e6e6e6;
   box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    border: none;
+  }
 }
 
 .page-nav__list-link {
@@ -48,17 +71,138 @@
   display: block;
   padding: 22px 0 24px 0;
   text-align: center;
+  border: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 18px;
     line-height: 24px;
     padding: 0;
+    padding-bottom: 8px;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 20px;
     line-height: 30px;
     padding: 0;
+    color: #111111;
+    padding-bottom: 8px;
+  }
+}
+
+
+.page-nav__list-index .page-nav__list-link {
+  @media (min-width: @desktop-width) {
     color: #ffffff;
   }
+}
+
+
+.page-nav__list-item_active .page-nav__list-link {
+  @media (min-width: @tablet-width) {
+    border-bottom: 2px solid #68b738;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-bottom: 2px solid #68b738;
+  }
+}
+
+.page-nav__list-index .page-nav__list-item_active {
+  @media (min-width: @desktop-width) {
+    border-bottom: 2px solid #ffffff;
+    color: #ffffff;
+  }
+}
+
+.page-nav--closed .page-header__button {
+  width: 24px;
+  height: 16px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+
+.page-nav--opened .page-header__button {
+  & img {
+    display: none;
+  }
+
+  padding: 0;
+  border: none;
+
+  &::before,
+  &::after {
+    content: "";
+    cursor: pointer;
+    position: absolute;
+    top: -35px;
+    right: 0;
+    width: 25px;
+    height: 2px;
+    background-color: #000000;
+    z-index: 2;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    opacity: 0.6;
+  }
+
+  &:hover::before,
+  &:hover::after {
+    opacity: 0.8;
+  }
+}
+
+.page-nav--nojs {
+  width: 100%;
+}
+
+
+.page-nav--nojs .page-header__button {
+  border: none;
+  padding: 0;
+
+  & img {
+    display: none;
+  }
+}
+
+.page-nav--nojs .page-nav__list {
+  position: static;
 }

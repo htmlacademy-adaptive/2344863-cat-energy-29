@@ -3,6 +3,32 @@
   font-size: 36px;
   line-height: 40px;
   color: #000000;
+  margin: 0 0 40px 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin: 0 0 72px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin: 0 0 72px 0;
+  }
+}
+
+
+.advantage-functional-nutrition__index {
+  margin-top: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 71px;
+  }
 }
 
 .advantage-functional-nutrition__list {
@@ -28,6 +54,19 @@
   padding: 0;
   list-style-type: none;
   display: flex;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+    align-items: start;
+    gap: 31px;
+    max-width: 224px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+    align-items: start;
+    gap: 31px;
+  }
 }
 
 .advantage-functional-nutrition__description {
@@ -36,8 +75,31 @@
   line-height: 18px;
   color: #444444;
   margin-left: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
 }
 
 .advantage-functional-nutrition__icon {
-  width: 75%;
+  width: 60px;
+  height: 60px;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 80px;
+    height: 80px;
+  }
 }
